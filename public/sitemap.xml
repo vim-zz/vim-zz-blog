@@ -4,9 +4,10 @@
         <loc>http://127.0.0.1:1111/</loc>
     </url>
     <url>
-        <loc>http://127.0.0.1:1111/blog/</loc>
+        <loc>http://127.0.0.1:1111/2020-08-08/</loc>
+        <lastmod>2020-08-08T12:00:00-03:00</lastmod>
     </url>
     <url>
-        <loc>http://127.0.0.1:1111/blog/2020-08-08/</loc>
+        <loc>http://127.0.0.1:1111/page/1/</loc>
     </url>
 </urlset>

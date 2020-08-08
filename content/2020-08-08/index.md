@@ -1,7 +1,7 @@
 +++
+date = 2020-08-08T12:00:00-03:00
+title = "Blogging the hard way..."
 +++
-
-# Blogging the hard way... 
 
 I decided to restart my blog (after more than 10 years silence). I decided that this time I want to have total control over my content and the visuals, and that having wordpress or similar doesn't worth the loss of control.
 
