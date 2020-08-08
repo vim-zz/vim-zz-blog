@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://vim-zz.com/sitemap.xml
