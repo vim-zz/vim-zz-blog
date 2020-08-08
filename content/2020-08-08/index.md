@@ -69,3 +69,4 @@ Then, on netlify, just point it to my github project at https://github.com/vim-z
 
 It's then takes you through some quick steps and you are done.
 
+Now the nice thing is that all I need is to add stuff with my favorit editor and whenever I push to git netlify automatically updates the website. So cool 😎.
