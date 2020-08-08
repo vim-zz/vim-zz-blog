@@ -66,3 +66,6 @@ ZOLA_VERSION = "0.11.0"
 ```
 
 Then, on netlify, just point it to my github project at https://github.com/vim-zz/vim-zz-blog.git
+
+It's then takes you through some quick steps and yoru are done.
+
