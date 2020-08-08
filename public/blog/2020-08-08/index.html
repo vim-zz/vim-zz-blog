@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <title></title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;main.css">
+
+    
+
+    
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to content</a>
+    <div class="container">
+        <header> 
+            <h1 class="site-header">
+                <a href="http:&#x2F;&#x2F;127.0.0.1:1111">vim-zz</a>
+            </h1>
+            <nav>
+                
+                
+                
+            </nav>
+        </header>
+        <main id="main" tabindex="-1">
+            
+
+<article class="post">
+    <header>
+        <h1></h1>
+    </header>
+    <div class="content">
+        <h1 id="blogging-the-hard-way">Blogging the hard way...</h1>
+<p>I decided to restart my blog (after more than 10 years silence). I decided that this time I want to have total control over my content and the visuals, and that having wordpress or similar doesn't worth the loss of control.</p>
+<p>Being in ❤️LOVE❤️ with Rust for the last couple of years I looked for static website framework and settled on on (Zola)[https://getzola.org].</p>
+<p>I also found netlify to serve the blog.</p>
+<p>First step is to create clean skeleton form the blog, simply by using zola cli:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">zola</span><span style="color:#c0c5ce;"> init vim-zz-blog
+</span><span style="color:#96b5b4;">cd</span><span style="color:#c0c5ce;"> vim-zz-blog
+</span></code></pre>
+<p>I also initialized a new repo on (github)[https://github.com/vim-zz/vim-zz-blog.git], and pushed the new blog directory.</p>
+<p>Then, I checked several themes, including (dinkleberg)[https://github.com/rust-br/dinkleberg] and (simple-dev-blog)[https://github.com/bennetthardwick/simple-dev-blog-zola-starter] but there were some issues with getting them working. </p>
+<p>Lesson: Zola is checking the template creation on build time. It's another evidence for Rust concepts strength: catch as much as possible on compile time rather than runtime.</p>
+<p>Eventually I used (anpu)[https://github.com/zbrox/anpu-zola-theme] which just works.</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> clone</span><span style="color:#bf616a;"> --depth</span><span style="color:#c0c5ce;">=1 git@github.com:zbrox/anpu-zola-theme.git themes/anpu
+</span></code></pre>
+<p>With this on the main config.toml:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">theme </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">anpu</span><span style="color:#c0c5ce;">&quot;
+
+</span><span style="color:#bf616a;">taxonomies </span><span style="color:#c0c5ce;">= [
+    { </span><span style="color:#bf616a;">name </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">categories</span><span style="color:#c0c5ce;">&quot; },
+    { </span><span style="color:#bf616a;">name </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">tags</span><span style="color:#c0c5ce;">&quot; },
+]
+</span></code></pre>
+<p>Check:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">zola</span><span style="color:#c0c5ce;"> serve
+</span></code></pre>
+<p>Voilà!</p>
+<p><img src="http://127.0.0.1:1111/blog/2020-08-08/new_blog.png" alt="New blog" /></p>
+<p>Now all I have to do is to add files under content directory and it live loaded into <a href="http://127.0.0.1:1111">127.0.0.1:1111</a></p>
+<p>Next, netlify it!</p>
+<h2 id="netlify">Netlify</h2>
+<p>Zola is supported by netlify bu simply adding the netlify.toml file on the project root directory:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">[build]
+</span><span style="color:#bf616a;">command </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">zola build</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#bf616a;">publish </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">public</span><span style="color:#c0c5ce;">&quot;
+
+[build.environment]
+</span><span style="color:#bf616a;">ZOLA_VERSION </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">0.11.0</span><span style="color:#c0c5ce;">&quot;
+</span></code></pre>
+<p>Then, on netlify, just point it to my github project at https://github.com/vim-zz/vim-zz-blog.git</p>
+
+    </div>
+
+    
+    <div class="article-info">
+        
+        <div class="article-taxonomies">
+            
+            
+        </div>
+    </div>
+
+</article>
+
+
+        </main>
+        <footer>
+            <p>
+                © vim-zz 2020<br>
+            </p>
+            <p>
+                
+                
+            </p>
+        </footer>
+    </div>
+<script src="/livereload.js?port=1025&amp;mindelay=10"></script></body>
+</html>

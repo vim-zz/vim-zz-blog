@@ -1,7 +1,5 @@
 # The URL the site will be built for
-base_url = "https://vim-zz.com"
-
-title = "vim-zz"
+base_url = "https://anpu-zola-theme.netlify.app"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -11,14 +9,20 @@ compile_sass = true
 highlight_code = true
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+build_search_index = false
 
-theme = "anpu"
+title = "Anpu theme"
+description = "A clean blogging theme"
+generate_feed = true
 
 taxonomies = [
-    { name = "categories" },
-    { name = "tags" },
+    {name = "tags", rss = true},
+    {name = "categories", rss = true},
 ]
 
 [extra]
-# Put all your custom variables here
+anpu_date_format="%e %B %Y"
+anpu_menu_links = [
+    { url = "$BASE_URL/about/", name = "About" },
+    { url = "$BASE_URL/tags/", name = "Tags" },
+]
