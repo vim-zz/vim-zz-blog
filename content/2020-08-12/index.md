@@ -1,6 +1,11 @@
 +++
 date = 2020-08-12T20:50:00+03:00
 title = "Why blogging any way?!"
+summary = "It's been a while since I have enough time to explore and share on technical stuff, recently I thought of de-misfitting some exotics tech-buzz-words I hear - So I set my first goal which to understand genetic algorithms."
+
+[taxonomies] 
+categories = ["programming", "frameworks"] 
+tags = ["rust", "genetic"]
 +++
 
 It's been a while since I have enough time to explore and share on technical stuff, recently I thought of de-misfitting some exotics tech-buzz-words I hear - So I set my first goal which to understand genetic algorithms.
